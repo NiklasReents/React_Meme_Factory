@@ -88,6 +88,7 @@ function App() {
           <div>
             {memes[currentMeme] ? (
               <img
+                id="meme_image"
                 src={memes[currentMeme].url}
                 alt="Meme"
                 style={{ width: "100%" }}
