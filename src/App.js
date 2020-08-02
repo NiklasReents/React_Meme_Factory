@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <div id="formWrapper">
-        <h1>Create Some Dank Memes!</h1>
+        <h1 id="meme-font">Create Some Dank Memes!</h1>
         <div>
           <Form>
             <Form.Row>
@@ -50,7 +50,7 @@ function App() {
                 />
               </Col>
               <Button
-                className="button-margin"
+                className="element-margin"
                 variant="danger"
                 onClick={() => {
                   const firstvalue = document.getElementById("toptext").value;
@@ -68,7 +68,7 @@ function App() {
         <Form>
           <Form.Row>
             <Button
-              className="button-margin"
+              className="element-margin"
               onClick={() => {
                 const previousMeme = currentMeme;
                 if (previousMeme > 0) setCurrentMeme(previousMeme - 1);
@@ -79,7 +79,7 @@ function App() {
               Previous Picture
             </Button>
             <Button
-              className="button-margin"
+              className="element-margin"
               onClick={() => {
                 const nextMeme = currentMeme;
                 if (nextMeme < memes.length - 1) setCurrentMeme(nextMeme + 1);
@@ -92,7 +92,7 @@ function App() {
               Next Picture
             </Button>
             <Button
-              className="button-margin"
+              className="element-margin"
               variant="dark"
               onClick={() => {
                 setCurrentMeme([Math.floor(Math.random() * memes.length)]);
@@ -105,26 +105,15 @@ function App() {
         </Form>
       </div>
       <div>
-        <div className="container">
-          <div className="text-block">
-            <h1>{topPictureText}</h1>
-          </div>
-          <div>
-            {memes[currentMeme] ? (
-              <img
-                id="meme_image"
-                src={memes[currentMeme].url}
-                alt="Meme"
-                style={{ width: "100%" }}
-              />
-            ) : (
-              []
-            )}
-          </div>
-          <div className="text-block-2">
-            <h1>{bottomPictureText}</h1>
-          </div>
+        <h1 className="text-block">{topPictureText}</h1>
+        <div id="image-container" className="element-margin">
+          {memes[currentMeme] ? (
+            <img id="meme_image" src={memes[currentMeme].url} alt="Meme" />
+          ) : (
+            []
+          )}
         </div>
+        <h1 className="text-block">{bottomPictureText}</h1>
       </div>
     </div>
   );

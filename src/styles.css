@@ -4,31 +4,39 @@
   align-items: center;
 }
 
+#image-container {
+  display: flex;
+  justify-content: center;
+}
+
 #meme_image {
-  max-width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
 }
 
-.button-margin {
+#meme-font {
+  font-size: 3em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #fff;
+  text-shadow: 0px 0px 2px black;
+  -webkit-text-stroke: 3px black;
+  line-height: 1;
+}
+
+.element-margin {
   margin: 5px 5px 5px 5px;
-}
-
-.container {
-  position: relative;
-  font-family: Arial;
 }
 
 .text-block {
   position: absolute;
-  top: 30px;
-  left: 100px;
-  color: white;
-  background-color: black;
-}
-
-.text-block-2 {
-  position: absolute;
-  bottom: 30px;
-  right: 100px;
-  color: white;
-  background-color: black;
+  margin: 0;
+  width: 100%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 0px 2px black;
+  -webkit-text-stroke: 3px black;
+  line-height: 1;
 }
