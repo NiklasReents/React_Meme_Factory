@@ -4,6 +4,27 @@
   align-items: center;
 }
 
+#meme-font {
+  font-size: 3em;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #fff;
+  text-shadow: 0px 0px 2px black;
+  -webkit-text-stroke: 3px black;
+  line-height: 1;
+}
+
+#text-block-top {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 0px 2px black;
+  -webkit-text-stroke: 3px black;
+  line-height: 1.8;
+}
+
 #image-container {
   display: flex;
   justify-content: center;
@@ -16,27 +37,18 @@
   object-fit: contain;
 }
 
-#meme-font {
-  font-size: 3em;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: #fff;
-  text-shadow: 0px 0px 2px black;
-  -webkit-text-stroke: 3px black;
-  line-height: 1;
-}
-
-.element-margin {
-  margin: 5px 5px 5px 5px;
-}
-
-.text-block {
+#text-block-bottom {
   position: absolute;
+  transform: translate(-0%, -150%);
   margin: 0;
   width: 100%;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
   color: #fff;
   text-shadow: 0px 0px 2px black;
-  -webkit-text-stroke: 3px black;
-  line-height: 1;
+  -webkit-text-stroke: 3px black;  
+}
+
+.element-margin {
+  margin: 5px 5px 5px 5px;
 }

@@ -105,7 +105,7 @@ function App() {
         </Form>
       </div>
       <div>
-        <h1 className="text-block">{topPictureText}</h1>
+        <h1 id="text-block-top">{topPictureText}</h1>
         <div id="image-container" className="element-margin">
           {memes[currentMeme] ? (
             <img id="meme_image" src={memes[currentMeme].url} alt="Meme" />
@@ -113,7 +113,7 @@ function App() {
             []
           )}
         </div>
-        <h1 className="text-block">{bottomPictureText}</h1>
+        <h1 id="text-block-bottom">{bottomPictureText}</h1>
       </div>
     </div>
   );
