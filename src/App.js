@@ -30,9 +30,6 @@ function App() {
           <Form>
             <Form.Row>
               <Col>
-                {/*onChange={(event) => {
-              setTopPictureText(event.target.value);
-            }}*/}
                 <Form.Control
                   id="toptext"
                   type="text"
@@ -40,9 +37,6 @@ function App() {
                 />
               </Col>
               <Col>
-                {/*onChange={(event) => {
-              setBottomPictureText(event.target.value);
-            }}*/}
                 <Form.Control
                   id="bottomtext"
                   type="text"
@@ -70,8 +64,7 @@ function App() {
             <Button
               className="element-margin"
               onClick={() => {
-                const previousMeme = currentMeme;
-                if (previousMeme > 0) setCurrentMeme(previousMeme - 1);
+                if (currentMeme > 0) setCurrentMeme(currentMeme - 1);
                 else setCurrentMeme(memes.length - 1);
               }}
               type="button"
@@ -81,11 +74,9 @@ function App() {
             <Button
               className="element-margin"
               onClick={() => {
-                const nextMeme = currentMeme;
-                if (nextMeme < memes.length - 1) setCurrentMeme(nextMeme + 1);
-                else {
-                  setCurrentMeme(0);
-                }
+                if (currentMeme < memes.length - 1)
+                  setCurrentMeme(currentMeme + 1);
+                else setCurrentMeme(0);
               }}
               type="button"
             >
